@@ -105,7 +105,6 @@ int main(int argc, char** argv)
 
 
 
-       // sensor_msgs::ImagePtr msg1 = cv_bridge::CvImage(std_msgs::Header(), "brg8", image1).toImageMsg();
 
 
 
@@ -113,7 +112,7 @@ int main(int argc, char** argv)
 
         header.stamp = ros::Time::now(); // time
 
-        img_bridge = cv_bridge::CvImage(header, sensor_msgs::image_encodings::MONO8, gray);// RGB8
+        img_bridge = cv_bridge::CvImage(header, sensor_msgs::image_encodings::MONO8, gray);
 
         img_bridge.toImageMsg(img_msg); // from cv_bridge to sensor_msgs::Image 
 
