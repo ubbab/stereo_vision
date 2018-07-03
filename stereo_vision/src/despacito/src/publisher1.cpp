@@ -56,7 +56,6 @@ int main(int argc, char** argv)
 
 
 
-     //cap1.open(2);
 
     if ( !cap2.isOpened() )
 
@@ -104,7 +103,6 @@ int main(int argc, char** argv)
 
        
 
-       // msg = cv_bridge::CvImage(std_msgs::Header(), "bgr8", image1).toImageMsg();
 
 
 
@@ -184,19 +182,8 @@ int main(int argc, char** argv)
 
 	}	
 
-        //
-
-
-
-        //sensor_msgs::ImagePtr msg1 = cv_bridge::CvImage(std_msgs::Header(), "bgr8", image1).toImageMsg();
-
-
-
-
-
-
-
-        info_camera1.header.stamp = ros::Time::now(); //
+        
+	info_camera1.header.stamp = ros::Time::now(); 
 
         pub1.publish(img_msg,info_camera1,ros::Time::now());
 
