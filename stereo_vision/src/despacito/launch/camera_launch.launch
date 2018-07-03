@@ -1,0 +1,21 @@
+<launch>
+
+   <node name="publisher" type="publisher" pkg="despacito">
+
+        <rosparam command="load" file="$(find despacito)/left.yaml"/>
+
+   </node>
+
+   <node name="publisher1" type="publisher1" pkg="despacito">
+
+        <rosparam command="load" file="$(find despacito)/right.yaml"/>
+
+   </node>
+
+     <param name="approximate_sync" value="true"/>
+     <param name="queue_size" value="10"/>
+
+
+ </launch>
+
+
